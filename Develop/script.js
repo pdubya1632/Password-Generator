@@ -1,6 +1,14 @@
 // Assignment Code
 const generateBtn = document.querySelector("#generate");
 
+// Get DOM
+const lengthDOM = document.getElementById('length');
+const uppercaseDOM = document.getElementById('uppercase');
+const numbersDOM = document.getElementById('numbers');
+const symbolsDOM = document.getElementById('symbols');
+const generatebtn = document.getElementById('generate');
+const form = document.getElementById('passGenerate');
+
 let generatePassword = (count, upper, number, symbol) => {
 
 }

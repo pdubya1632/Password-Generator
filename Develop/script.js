@@ -4,8 +4,8 @@ const lengthDOM = document.getElementById('length');
 const uppercaseDOM = document.getElementById('uppercase');
 const numbersDOM = document.getElementById('numbers');
 const symbolsDOM = document.getElementById('symbols');
-const generateBtn = document.getElementById('generate');
 const form = document.getElementById('passGenerate');
+const generateBtn = document.getElementById('generate');
 
 // Checking the options that are selected and setting the password
 form.addEventListener('submit', (e) => {
@@ -26,6 +26,3 @@ const writePassword = () => {
   passwordText.value = password;
 
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", createPassword);

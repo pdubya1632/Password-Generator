@@ -2,9 +2,11 @@
 const generateBtn = document.querySelector("#generate");
 
 const generatePassword = () => {
-  let passCriteria = window.prompt("Password criteria?");
-  let passLength = window.prompt("Password length?");
-  let passCharacterType = window.prompt("Password character types?");
+  let passLength = window.prompt("Enter the length of your password", "Choose a number btwn 8 and 128");
+  let lowercase = window.prompt("Do you want lowercase characters?", "Y or N");
+  let uppercase = window.prompt("Do you want uppercase characters?", "Y or N");
+  let numeric = window.prompt("Do you want numeric characters?", "Y or N");
+  let special = window.prompt("Do you want special characters?", "Y or N");
 
 // password criteria
 // select which criteria to include in the password

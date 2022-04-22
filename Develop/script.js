@@ -8,8 +8,14 @@ const symbolsDOM = document.getElementById('symbols');
 const form = document.getElementById('passGenerate');
 // const generateBtn = document.getElementById('generate');
 
-const createPassword = (count, upper, numbers, symbols) => {
+// Create char codes
+const uppercaseCodes = arrayFromLowToHigh(65,90);
 
+
+
+// Create password
+const createPassword = (count, upper, numbers, symbols) => {
+  passwordText.innerText = count;
 }
 
 // Write password to the #password input
@@ -29,7 +35,7 @@ form.addEventListener('submit', (event) => {
   const numbers = numbersDOM.checked;
   const symbols = symbolsDOM.checked;
   const password = createPassword(count, upper, numbers, symbols);
-  resultDOM.innerText = password;
+  passwordText.innerText = password;
 });
 
 

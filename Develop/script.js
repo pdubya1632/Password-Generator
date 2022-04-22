@@ -5,16 +5,17 @@ const uppercaseDOM = document.getElementById('uppercase');
 const numbersDOM = document.getElementById('numbers');
 const symbolsDOM = document.getElementById('symbols');
 const form = document.getElementById('passGenerate');
-const generateBtn = document.getElementById('generate');
+// const generateBtn = document.getElementById('generate');
 
 // Checking the options selected and setting password
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const count = lengthDOM.value;
-  const upper = uppercaseDOM.value;
-  const numbers = numbersDOM.value;
-  const symbols = symbolsDOM.value;
-  createPassword(count, upper, numbers, symbols);
+  const upper = uppercaseDOM.checked;
+  const numbers = numbersDOM.checked;
+  const symbols = symbolsDOM.checked;
+  // const password = createPassword(count, upper, numbers, symbols);
+  // resultDOM.innerText = password;
 });
 
 let createPassword = (count, upper, numbers, symbols) => {

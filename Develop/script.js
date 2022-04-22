@@ -21,15 +21,6 @@ const createPassword = (count, upper, numbers, symbols) => {
   
 }
 
-// Write password to the #password input
-const writePassword = () => {
-  let password = createPassword();
-  let passwordText = document.querySelector('#password');
-
-  passwordText.value = password;
-
-}
-
 // Checking the options selected, calling password function, inserting password
 form.addEventListener('submit', (event) => {
   event.preventDefault();

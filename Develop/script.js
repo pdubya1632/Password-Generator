@@ -13,11 +13,11 @@ const chars = {
 
 // Array of functions for each character type
 const randomChars = [
-  function lowerCase() { return chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)] },
-  function upperCase() { return chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)] },
-  function numbers() { return chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)] },
-  function symbols() { return chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)] }
-]
+  function upperCase() { return keys.upperCase[Math.floor(Math.random() * keys.upperCase.length)]; },
+  function lowerCase() { return keys.lowerCase[Math.floor(Math.random() * keys.lowerCase.length)]; },
+  function numbers() { return keys.numbers[Math.floor(Math.random() * keys.numbers.length)]; },
+  function symbols() { return keys.symbols[Math.floor(Math.random() * keys.symbols.length)]; }
+];
 
 // Create password
 const createPassword = (event) => {
@@ -34,8 +34,10 @@ const createPassword = (event) => {
   // create empty password variable that can be updated
   let password = '';
 
+  // add new characters to password until count is hit
   while (password.length < count) {
-    password += randomChars[Math.floor(Math.random() * randomChars.length)];
+    let newChar = randomChars[Math.floor(Math.random() * randomChars.length)]
+    password += newChar;
   }
 
   // add final password to text field on page

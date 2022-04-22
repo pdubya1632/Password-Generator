@@ -9,13 +9,13 @@ const createPassword = (event) => {
   // prevent page from refreshing
   event.preventDefault();
 
-  // create variables from form selections
+  // get values from form selections
   const count = document.getElementById('count').value;
   const upper = document.getElementById('upperCase').checked;
   const numbers = document.getElementById('numbers').checked;
   const symbols = document.getElementById('symbols').checked;
 
-  // create empty password variable
+  // create empty password
   let password = '';
 
   // create list of characters to pull from

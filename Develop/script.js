@@ -3,13 +3,6 @@
 const passwordText = document.getElementById('passwordText');
 const form = document.getElementById('passwordOptions');
 
-// Array of functions for each character type
-const randomChars = [
-  function upperCase() { return chars.upperCase[Math.floor(Math.random() * chars.upperCase.length)]; },
-  function numbers() { return chars.numbers[Math.floor(Math.random() * chars.numbers.length)]; },
-  function symbols() { return chars.symbols[Math.floor(Math.random() * chars.symbols.length)]; }
-];
-
 // Create password
 const createPassword = (event) => {
 
@@ -22,7 +15,7 @@ const createPassword = (event) => {
   const numbers = document.getElementById('numbers').checked;
   const symbols = document.getElementById('symbols').checked;
 
-  // create empty password variable that can be updated
+  // create empty password variable
   let password = '';
 
   // create list of characters to pull from
@@ -30,7 +23,6 @@ const createPassword = (event) => {
   if (upper) charList += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   if (numbers) charList += '0123456789'; 
   if (symbols) charList += '!@#$%^&*()_+~\\`|}{[]:;?><,./-=';  
-  console.log(charList);
 
   // add new characters to password until count is hit
   while (password.length < count) {

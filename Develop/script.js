@@ -10,12 +10,15 @@ const form = document.getElementById('passGenerate');
 
 // Create char codes
 const chars = {
-  
+  lowercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+  uppercase: 'abcdefghijklmnopqrstuvwxyz',
+  numbers: '0123456789',
+  synbols: '!@#$%^&*()_+~\\`|}{[]:;?><,./-=',
 }
 
 // Create password
 const createPassword = (count, upper, numbers, symbols) => {
-  passwordText.innerText = count;
+  
 }
 
 // Write password to the #password input
@@ -27,14 +30,13 @@ const writePassword = () => {
 
 }
 
-// Checking the options selected and setting password
+// Checking the options selected, calling password function, inserting password
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const count = lengthDOM.value;
   const upper = uppercaseDOM.checked;
   const numbers = numbersDOM.checked;
   const symbols = symbolsDOM.checked;
-  console.log(uppercaseCodes);
   // const password = createPassword(count, upper, numbers, symbols);
   // passwordText.innerText = password;
 });

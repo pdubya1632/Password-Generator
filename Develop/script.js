@@ -7,21 +7,24 @@ const symbolsDOM = document.getElementById('symbols');
 const form = document.getElementById('passGenerate');
 const generateBtn = document.getElementById('generate');
 
-// Checking the options that are selected and setting the password
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const characterAmount = lengthDOM.value;
-  console.log(characterAmount);
+// Checking the options selected and setting password
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const count = lengthDOM.value;
+  const upper = uppercaseDOM.value;
+  const numbers = numbersDOM.value;
+  const symbols = symbolsDOM.value;
+  createPassword(count, upper, numbers, symbols);
 });
 
-let createPassword = (count, upper, number, symbol) => {
+let createPassword = (count, upper, numbers, symbols) => {
 
 }
 
 // Write password to the #password input
 const writePassword = () => {
   let password = createPassword();
-  let passwordText = document.querySelector("#password");
+  let passwordText = document.querySelector('#password');
 
   passwordText.value = password;
 

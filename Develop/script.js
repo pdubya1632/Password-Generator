@@ -36,10 +36,9 @@ const createPassword = (event) => {
 
   // add new characters to password until count is hit
   while (password.length < count) {
-    password += randomChars[Math.floor(Math.random() * randomChars.length)]
+    let newChar = randomChars[Math.floor(Math.random() * randomChars.length)];
+    password += newChar();
   }
-
-  console.log(randomChars[Math.floor(Math.random() * randomChars.length)]());
 
   // add final password to text field on page
   passwordText.textContent = password;

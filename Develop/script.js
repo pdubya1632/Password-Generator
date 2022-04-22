@@ -27,8 +27,7 @@ const createPassword = (event) => {
   let password = '';
 
   while (password.length < count) {
-    
-    password += '1';
+    password += chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)];
   }
 
   console.log(password);

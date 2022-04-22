@@ -6,7 +6,6 @@ const uppercaseDOM = document.getElementById('uppercase');
 const numbersDOM = document.getElementById('numbers');
 const symbolsDOM = document.getElementById('symbols');
 const form = document.getElementById('passGenerate');
-// const generateBtn = document.getElementById('generate');
 
 // Create char codes
 const chars = {
@@ -28,7 +27,7 @@ form.addEventListener('submit', (event) => {
   const upper = uppercaseDOM.checked;
   const numbers = numbersDOM.checked;
   const symbols = symbolsDOM.checked;
-  // const password = createPassword(count, upper, numbers, symbols);
+  const password = createPassword(count, upper, numbers, symbols);
   // passwordText.innerText = password;
 });
 

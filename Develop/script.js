@@ -15,14 +15,14 @@ const createPassword = (event) => {
   const numbers = document.getElementById('numbers').checked;
   const symbols = document.getElementById('symbols').checked;
 
-  // create empty password
-  let password = '';
-
   // create list of characters to pull from
   let charList = 'abcdefghijklmnopqrstuvwxyz';
   if (upper) charList += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   if (numbers) charList += '0123456789'; 
-  if (symbols) charList += '!@#$%^&*()_+~\\`|}{[]:;?><,./-=';  
+  if (symbols) charList += '!@#$%^&*()_+~\\`|}{[]:;?><,./-='; 
+
+  // create empty password
+  let password = ''; 
 
   // add new characters to password until count is hit
   while (password.length < count) {

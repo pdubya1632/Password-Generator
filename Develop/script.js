@@ -1,19 +1,19 @@
 
-// Get DOM
+// Get elements on page
 const passwordText = document.getElementById('password');
 const form = document.getElementById('passGenerate');
 
 // Create object with all char codes
 const chars = {
-  lowercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-  uppercase: 'abcdefghijklmnopqrstuvwxyz',
+  lowerCase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+  upperCase: 'abcdefghijklmnopqrstuvwxyz',
   numbers: '0123456789',
-  synbols: '!@#$%^&*()_+~\\`|}{[]:;?><,./-=',
+  symbols: '!@#$%^&*()_+~\\`|}{[]:;?><,./-=',
 }
 
 // Create password
 const createPassword = (count, upper, numbers, symbols) => {
-  
+  console.log(keys.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)]);
 }
 
 // Checking options, calling password function, inserting password

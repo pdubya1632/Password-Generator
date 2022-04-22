@@ -9,9 +9,9 @@ const form = document.getElementById('passGenerate');
 // const generateBtn = document.getElementById('generate');
 
 // Create char codes
-const uppercaseCodes = arrayFromLowToHigh(65,90);
-
-
+const chars = {
+  
+}
 
 // Create password
 const createPassword = (count, upper, numbers, symbols) => {
@@ -34,8 +34,9 @@ form.addEventListener('submit', (event) => {
   const upper = uppercaseDOM.checked;
   const numbers = numbersDOM.checked;
   const symbols = symbolsDOM.checked;
-  const password = createPassword(count, upper, numbers, symbols);
-  passwordText.innerText = password;
+  console.log(uppercaseCodes);
+  // const password = createPassword(count, upper, numbers, symbols);
+  // passwordText.innerText = password;
 });
 
 

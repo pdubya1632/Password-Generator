@@ -13,10 +13,10 @@ const chars = {
 
 // Array of functions for each character type
 const randomChars = [
-  function lowerCase() { chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)] },
-  function upperCase() { chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)] },
-  function numbers() { chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)] },
-  function symbols() { chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)] }
+  function lowerCase() { return chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)] },
+  function upperCase() { return chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)] },
+  function numbers() { return chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)] },
+  function symbols() { return chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)] }
 ]
 
 // Create password
@@ -35,7 +35,7 @@ const createPassword = (event) => {
   let password = '';
 
   while (password.length < count) {
-
+    password += randomChars[Math.floor(Math.random() * randomChars.length)];
   }
 
   // add final password to text field on page

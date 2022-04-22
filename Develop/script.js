@@ -13,16 +13,27 @@ const chars = {
 
 // Create password
 const createPassword = (event) => {
-  // generateChars = [];
-  // while (count.length > generateChars.length) {
-  //   return chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)];
-  // }
+
+  // prevent page from refreshing
   event.preventDefault();
-  const count = document.getElementById('length').value;
+
+  // create variables from form selections
+  const count = document.getElementById('count').value;
   const upper = document.getElementById('uppercase').checked;
   const numbers = document.getElementById('numbers').checked;
   const symbols = document.getElementById('symbols').checked;
 
+  // create empty password variable that can be updated
+  let password = '';
+
+  while (password.length < count) {
+    
+    password += '1';
+  }
+
+  console.log(password);
+
+  // add final password to text field on page
   //passwordText.innerText = password;
 }
 

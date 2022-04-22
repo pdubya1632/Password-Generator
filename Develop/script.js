@@ -1,15 +1,23 @@
 
 // Get elements on page
-const passwordText = document.getElementById('password');
-const form = document.getElementById('passGenerate');
+const passwordText = document.getElementById('passwordText');
+const form = document.getElementById('passwordOptions');
 
-// Create object with all char codes
+// Create object with all possible characters
 const chars = {
   lowerCase: 'abcdefghijklmnopqrstuvwxyz',
   upperCase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
   numbers: '0123456789',
   symbols: '!@#$%^&*()_+~\\`|}{[]:;?><,./-='
 }
+
+// Array of functions for each character type
+const randomChars = [
+  function lowerCase() { chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)] },
+  function upperCase() { chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)] },
+  function numbers() { chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)] },
+  function symbols() { chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)] }
+]
 
 // Create password
 const createPassword = (event) => {
@@ -27,13 +35,11 @@ const createPassword = (event) => {
   let password = '';
 
   while (password.length < count) {
-    password += chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)];
+
   }
 
-  console.log(password);
-
   // add final password to text field on page
-  //passwordText.innerText = password;
+  passwordText.innerHTML = password;
 }
 
 // Call createPassword function after submitting form

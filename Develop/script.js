@@ -5,26 +5,28 @@ const form = document.getElementById('passGenerate');
 
 // Create object with all char codes
 const chars = {
-  lowerCase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-  upperCase: 'abcdefghijklmnopqrstuvwxyz',
+  lowerCase: 'abcdefghijklmnopqrstuvwxyz',
+  upperCase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
   numbers: '0123456789',
-  symbols: '!@#$%^&*()_+~\\`|}{[]:;?><,./-=',
+  symbols: '!@#$%^&*()_+~\\`|}{[]:;?><,./-='
 }
 
 // Create password
-const createPassword = (count, upper, numbers, symbols) => {
-  console.log(keys.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)]);
-}
-
-// Checking options, calling password function, inserting password
-form.addEventListener('submit', (event) => {
+const createPassword = (event) => {
+  // generateChars = [];
+  // while (count.length > generateChars.length) {
+  //   return chars.lowerCase[Math.floor(Math.random() * chars.lowerCase.length)];
+  // }
   event.preventDefault();
   const count = document.getElementById('length').value;
   const upper = document.getElementById('uppercase').checked;
   const numbers = document.getElementById('numbers').checked;
   const symbols = document.getElementById('symbols').checked;
-  const password = createPassword(count, upper, numbers, symbols);
-  // passwordText.innerText = password;
-});
+
+  //passwordText.innerText = password;
+}
+
+// Call createPassword function after submitting form
+form.addEventListener('submit', createPassword);
 
 

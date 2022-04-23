@@ -53,7 +53,7 @@ header {
   -moz-appearance: none;
   appearance: none;
   border: none;
-  display: block;
+  min-height: 120px;
   width: 100%;
   padding: 10px 20px 30px 20px;
   font-size: 1.2rem;
@@ -64,6 +64,10 @@ header {
   border-radius: 6px;
   resize: none;
   overflow: hidden;
+}
+
+#count {
+  width: 75px;
 }
 
 .btn {

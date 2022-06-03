@@ -1,4 +1,4 @@
-# UWCB-03-Homework
+# Random Password Generator
 UW Coding Bootcamp : Homework 03
 
 ## Description
